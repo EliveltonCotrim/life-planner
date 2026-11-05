@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-window",
+  "description": "Janela principal sem acesso a APIs ou plugins Tauri não utilizados pelo bootstrap.",
+  "windows": ["main"],
+  "permissions": []
+}

@@ -1,0 +1,19 @@
+# Frontend
+node_modules/
+dist/
+.vite/
+
+# Rust and Tauri build output
+/src-tauri/target/
+/src-tauri/gen/schemas/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json

@@ -1,6 +1,6 @@
 # Backlog executável
 
-IDs estáveis: épicos `EP-01`…`EP-06`, histórias `US-001`…`US-034`. Prioridade: `P0` fundação/bloqueante, `P1` núcleo, `P2` extensão da primeira versão. Estimativas são pontos relativos, sem conversão para dias. Nenhuma história foi iniciada nesta atualização.
+IDs estáveis: épicos `EP-01`…`EP-06`, histórias `US-001`…`US-034`. Prioridade: `P0` fundação/bloqueante, `P1` núcleo, `P2` extensão da primeira versão. Estimativas são pontos relativos, sem conversão para dias.
 
 ## Fase 1 — Fundação
 
@@ -9,9 +9,9 @@ IDs estáveis: épicos `EP-01`…`EP-06`, histórias `US-001`…`US-034`. Priori
 
 #### US-001 — Iniciar o Life Planner no Windows
 - **História:** Como usuário, quero abrir o aplicativo desktop para acessar meu espaço de organização local.
-- **Aceite:** app abre janela principal; comandos Tauri disponíveis só pelas capabilities necessárias; erro de inicialização apresentado sem encerrar silenciosamente; execução não depende de rede.
-- **Tarefas técnicas:** criar scaffold Tauri 2/Vue 3/TS/Vite; configurar entrypoint Rust e janela; definir capabilities mínimas; configurar tratamento/log de erros de inicialização; documentar comandos de desenvolvimento/build.
-- **Prioridade:** P0; **Estimativa:** 5; **Dependências:** —; **Fase:** 1; **Status:** Não iniciada.
+- **Aceite:** app abre a janela principal; bootstrap não registra comandos de domínio nem concede permissões de plugins e a capability da janela não habilita APIs não usadas; falhas de montagem frontend mostram mensagem segura e registram diagnóstico técnico; falhas fatais de inicialização Tauri/Rust registram diagnóstico local e mostram mensagem nativa genérica no Windows; recursos do app não dependem de rede.
+- **Tarefas técnicas:** criar scaffold Tauri 2/Vue 3/TypeScript/Vite com pnpm e locks versionados; configurar entrypoint Rust e janela; definir capability mínima; diferenciar fallback/diagnóstico frontend e backend; documentar comandos de desenvolvimento/build.
+- **Prioridade:** P0; **Estimativa:** 5; **Dependências:** —; **Fase:** 1; **Status:** Em andamento.
 
 #### US-002 — Navegar pelo layout principal
 - **História:** Como usuário, quero acessar os módulos pela navegação principal.
@@ -242,5 +242,5 @@ IDs estáveis: épicos `EP-01`…`EP-06`, histórias `US-001`…`US-034`. Priori
 
 ## Primeira história pronta para implementação
 
-**US-001 — Iniciar o Life Planner no Windows** permanece preparada como primeira história de implementação. Nenhuma história foi iniciada nesta atualização, conforme instrução do usuário.
+**US-001 — Iniciar o Life Planner no Windows** está em andamento sob autorização explícita. Nenhuma outra história foi iniciada; US-002 permanece não iniciada.
 

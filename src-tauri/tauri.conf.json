@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Life Planner",
+  "version": "0.1.0",
+  "identifier": "com.lifeplanner.app",
+  "build": {
+    "beforeDevCommand": "corepack pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "corepack pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Life Planner",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "capabilities": ["main-window"],
+      "csp": {
+        "default-src": "'self' customprotocol: asset:",
+        "connect-src": "ipc: http://ipc.localhost",
+        "img-src": "'self' asset: http://asset.localhost data:",
+        "style-src": "'self'",
+        "object-src": "'none'",
+        "base-uri": "'self'"
+      },
+      "devCsp": {
+        "default-src": "'self' customprotocol: asset:",
+        "connect-src": "ipc: http://ipc.localhost http://localhost:1420 ws://localhost:1421",
+        "img-src": "'self' asset: http://asset.localhost data:",
+        "style-src": "'self' 'unsafe-inline'",
+        "object-src": "'none'",
+        "base-uri": "'self'"
+      }
+    }
+  },
+  "bundle": {
+    "active": false
+  }
+}

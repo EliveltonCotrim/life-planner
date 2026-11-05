@@ -1,0 +1,72 @@
+:root {
+  font-family: "Segoe UI", sans-serif;
+  color: #252522;
+  background: #f5f3ef;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.startup-state {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-height: 100vh;
+  padding: 32px;
+  text-align: center;
+}
+
+.startup-state h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.04em;
+}
+
+.startup-state p {
+  max-width: 34rem;
+  margin: 12px 0 0;
+  color: #62625c;
+  line-height: 1.6;
+}
+
+.startup-state .eyebrow {
+  margin-bottom: 12px;
+  color: #58715b;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.startup-state--error h1 {
+  color: #8e302c;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .startup-state {
+    animation: appear 180ms ease-out both;
+  }
+
+  @keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
